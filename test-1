@@ -1,5 +1,17 @@
-<style>
-.LqzjUe, .dZA9kd {
-  display: none;
+// Check if the parent page is from the same origin to avoid security issues
+if (window.parent !== window && window.parent.location.hostname === window.location.hostname) {
+  // Access the parent page's document
+  const parentDocument = window.parent.document;
+
+  // Find and update the style
+  const styleElement = parentDocument.querySelector('style#custom-styles');
+  if (styleElement) {
+    styleElement.textContent += '.hBW7Hb {display: none !important;}';
+  } else {
+    // If the style element doesn't exist, create it and add the style
+    const newStyleElement = parentDocument.createElement('style');
+    newStyleElement.id = 'custom-styles';
+    newStyleElement.textContent = '.hBW7Hb {display: none !important;}';
+    parentDocument.head.appendChild(newStyleElement);
+  }
 }
-</style>
