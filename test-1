@@ -6,12 +6,12 @@ if (window.parent !== window && window.parent.location.hostname === window.locat
   // Find and update the style
   const styleElement = parentDocument.querySelector('style#custom-styles');
   if (styleElement) {
-    styleElement.textContent += '.hBW7Hb {display: none !important;}';
+    styleElement.textContent += '.dZA9kd {display: none !important;}';
   } else {
     // If the style element doesn't exist, create it and add the style
     const newStyleElement = parentDocument.createElement('style');
     newStyleElement.id = 'custom-styles';
-    newStyleElement.textContent = '.hBW7Hb {display: none !important;}';
+    newStyleElement.textContent = '.dZA9kd {display: none !important;}';
     parentDocument.head.appendChild(newStyleElement);
   }
 }
